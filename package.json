@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "description": "Slack Message Builder",
   "author": "Dave Stevens <dave@crowdlab.com>",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/davestevens/slack-message-builder.git"
+  },
   "license": "MIT",
   "scripts": {
     "start": "http-server",
