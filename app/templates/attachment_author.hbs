@@ -1,0 +1,13 @@
+{{#if author_name}}
+  {{#if author_icon}}
+    <img
+       class="attachment_author_icon"
+       src="{{ author_icon }}"
+       width="16"
+       height="16"
+       />
+  {{/if}}
+  <span class="attachment_author_name">
+    {{ wrap_link author_name author_link }}
+  </span>
+{{/if}}

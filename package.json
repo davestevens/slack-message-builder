@@ -1,0 +1,21 @@
+{
+  "name": "slack-message-builder",
+  "version": "0.0.0",
+  "description": "Slack Message Builder",
+  "author": "Dave Stevens <dave@crowdlab.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "http-server",
+    "build": "coffee -cb app",
+    "build-watch": "coffee -cbw app"
+  },
+  "devDependencies": {
+    "bootstrap": "^3.3.2",
+    "coffee": "^1.0.0",
+    "handlebars": "^3.0.0",
+    "http-server": "^0.7.3",
+    "jquery": "^2.1.1",
+    "requirejs": "^2.1.15",
+    "requirejs-text": "^2.0.12"
+  }
+}

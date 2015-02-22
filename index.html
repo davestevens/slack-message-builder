@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slack Message Builder</title>
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="lib/slack-core.css">
+    <link rel="stylesheet" type="text/css" href="lib/slack-secondary.css">
+    <script src="node_modules/requirejs/require.js" data-main="/app/application.js"></script>
+  </head>
+
+  <body>
+    <div class="input">
+      <form action="POST">
+        <textarea>
+{
+  "text": "hello, world!",
+  "username": "A. Nonymous",
+  "attachments": [
+    {
+      "pretext": "pre-hello",
+      "text": "text-world"
+    }
+  ],
+  "icon_url": "http://lorempixel.com/48/48"
+}
+        </textarea>
+        <br/>
+        <button>Build!</button>
+      </form>
+    </div>
+    <div class="output light_theme"></div>
+  </body>
+</html>
