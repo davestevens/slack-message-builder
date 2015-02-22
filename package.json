@@ -7,9 +7,11 @@
   "scripts": {
     "start": "http-server",
     "build": "coffee -cb app",
-    "build-watch": "coffee -cbw app"
+    "build-watch": "coffee -cbw app",
+    "build-js": "coffee -cb app && r.js -o build.js"
   },
   "devDependencies": {
+    "almond": "^0.3.0",
     "bootstrap": "^3.3.2",
     "coffee": "^1.0.0",
     "handlebars": "^3.0.0",
