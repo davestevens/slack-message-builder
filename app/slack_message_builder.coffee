@@ -2,12 +2,11 @@ define ["jquery", "handlebars_helpers"],
 ($, Handlebars) ->
   class SlackMessageBuilder
     constructor: (options) ->
-      @$form = options.$form
       @$input = options.$input
       @$output = options.$output
 
     bind_events: ->
-      @$form.on("submit", @_parse_message)
+      @$input.find(".js-build").on("click", @_parse_message)
 
     payload_defaults:
       username: "incoming-webhook"
@@ -26,7 +25,7 @@ define ["jquery", "handlebars_helpers"],
 
       payload = @_parse_input()
       return unless payload
-      @$input.val(JSON.stringify(payload, null, 2))
+      @$input.find(".js-payload").val(JSON.stringify(payload, null, 2))
 
       payload = $.extend({}, @payload_defaults, payload)
       payload.attachments = @_extend_attachments(payload.attachments)
@@ -34,6 +33,7 @@ define ["jquery", "handlebars_helpers"],
       html = @_message_template(payload)
 
       @$output.append(html)
+      @$output.animate({ scrollTop: @$output[0].scrollHeight }, 800)
 
     _message_template: (payload) ->
       template = Handlebars.compile(Handlebars.partials.message)
@@ -41,7 +41,7 @@ define ["jquery", "handlebars_helpers"],
 
     _parse_input: ->
       try
-        JSON.parse(@$input.val())
+        JSON.parse(@$input.find(".js-payload").val())
       catch error
         # TODO: display error inline
         alert "Error parsing JSON: #{error.message}"

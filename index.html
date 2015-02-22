@@ -2,16 +2,32 @@
 <html>
   <head>
     <title>Slack Message Builder</title>
-    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="lib/slack-core.css">
     <link rel="stylesheet" type="text/css" href="lib/slack-secondary.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <script src="node_modules/requirejs/require.js" data-main="/app/application.js"></script>
+
+    <style>
+      html, body, .row-fluid { height: 100%; }
+      .input { height: 100%; background-color: #CCC; }
+      .input table { width: 100%; height: 100%; }
+      .output { height: 100%; overflow: scroll; }
+      .light_theme .message { padding-left: 48px; padding-right: 48px; }
+    </style>
   </head>
 
   <body>
-    <div class="input">
-      <form action="POST">
-        <textarea>
+    <div class="row-fluid">
+      <div class="input col-md-6">
+        <table>
+          <tr height="50px">
+            <td>
+              <h1>Slack Message Builder</h1>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <textarea class="js-payload form-control" style="height: 100%;">
 {
   "text": "hello, world!",
   "username": "A. Nonymous",
@@ -23,11 +39,17 @@
   ],
   "icon_url": "http://lorempixel.com/48/48"
 }
-        </textarea>
-        <br/>
-        <button>Build!</button>
-      </form>
+              </textarea>
+            </td>
+          </tr>
+          <tr height="50px">
+            <td>
+              <button class="js-build btn btn-primary btn-block">Build</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="output col-md-6 light_theme"></div>
     </div>
-    <div class="output light_theme"></div>
   </body>
 </html>

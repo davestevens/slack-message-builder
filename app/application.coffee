@@ -7,7 +7,6 @@ require.config
 
 require ["jquery", "slack_message_builder"], ($, SlackMessageBuilder) ->
   new SlackMessageBuilder(
-    $form: $(".input form")
-    $input: $(".input form textarea")
+    $input: $(".input")
     $output: $(".output")
   ).bind_events()
