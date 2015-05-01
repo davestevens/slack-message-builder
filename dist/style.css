@@ -1,0 +1,102 @@
+/* line 1, ../style/_message.scss */
+.message {
+  padding: 3px 48px;
+  font-size: 15px;
+  line-height: 22px;
+  color: #3d3c40;
+  position: relative;
+}
+/* line 8, ../style/_message.scss */
+.message__image {
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 18, ../style/_message.scss */
+.message__sender {
+  font-weight: bold;
+}
+/* line 23, ../style/_message.scss */
+.message__label--bot {
+  color: #797979;
+  font-size: 12px;
+  background: #f3f3f3;
+  padding: 2px;
+}
+/* line 31, ../style/_message.scss */
+.message__timestamp {
+  font-size: 12px;
+  color: #babbbf;
+}
+/* line 39, ../style/_message.scss */
+.message__attachment {
+  max-width: 520px;
+}
+
+/* line 5, ../style/_attachment.scss */
+.attachment__wrapper {
+  padding: 5px 0;
+  display: table;
+  width: 100%;
+}
+/* line 11, ../style/_attachment.scss */
+.attachment__bar {
+  width: 4px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  display: table-cell;
+}
+/* line 17, ../style/_attachment.scss */
+.attachment__content {
+  display: table-cell;
+  padding-left: 12px;
+}
+/* line 23, ../style/_attachment.scss */
+.attachment__author--icon {
+  width: 16px;
+  height: 16px;
+  float: left;
+  margin-top: 2px;
+  margin-right: 5px;
+}
+/* line 31, ../style/_attachment.scss */
+.attachment__author--name {
+  font-weight: bold;
+}
+/* line 36, ../style/_attachment.scss */
+.attachment__title {
+  font-weight: bold;
+}
+/* line 43, ../style/_attachment.scss */
+.attachment__fields {
+  display: inline-block;
+  width: 100%;
+}
+/* line 47, ../style/_attachment.scss */
+.attachment__fields table {
+  width: inherit;
+}
+
+/* line 2, ../style/_attachment_field.scss */
+.attachment_field__title {
+  font-weight: bold;
+}
+
+/* line 6, ../style/style.scss */
+html, body {
+  font-family: Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 12, ../style/style.scss */
+a {
+  text-decoration: none;
+}
