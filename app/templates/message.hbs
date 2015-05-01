@@ -1,17 +1,12 @@
-<div class=" message bot_message show_user avatar divider">
-  <div style="border: 0" class="member_image thumb_36">
-    <a href="#">
-      <img
-         style="border: 0"
-         src="{{ member_image this }}"
-         class="member_image thumb_36"
-         />
-    </a>
-  </div>
-  <span class="message_sender">{{ username }}</span>
-  <span class="bot_label">BOT</span>
-  <a href="#" class="timestamp">{{ timestamp }}</a>
-  <span class="message_content">{{ format text mrkdwn }}</span>
+<div class="message">
+  <img
+     class="message__image"
+     src="{{ member_image this }}"
+     />
+  <span class="message__sender">{{ username }}</span>
+  <span class="message__label--bot">BOT</span>
+  <span class="message__timestamp">{{ timestamp }}</span>
+  <div class="message__content">{{ format text mrkdwn }}</div>
   {{#each attachments}}
     {{> attachment}}
   {{/each}}

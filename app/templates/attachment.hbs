@@ -1,13 +1,11 @@
-<div class="inline_attachment">
-  <div class="attachment_pretext">{{ attachment_format "pretext" this }}</div>
-  <div class="inline_attachment_wrapper">
-    <div class="attachment_bar" style="background:{{ color }};">
-      <div class="shim"></div>
-    </div>
-    <div class="content dynamic_content_max_width">
+<div class="message__attachment">
+  <div class="attachment__pretext">{{ attachment_format "pretext" this }}</div>
+  <div class="attachment__wrapper">
+    <div class="attachment__bar" style="background:{{ color }};">&nbsp;</div>
+    <div class="attachment__content">
       {{> attachment_author}}
       {{> attachment_title}}
-      <div class="attachment_contents">{{ attachment_format "text" this }}</div>
+      <div class="attachment__contents">{{ attachment_format "text" this }}</div>
       {{> attachment_fields}}
     </div>
   </div>

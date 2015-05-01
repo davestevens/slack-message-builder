@@ -10,7 +10,7 @@ define ["jquery", "handlebars_helpers"],
 
     payload_defaults:
       username: "incoming-webhook"
-      icon_url: "https://slack.global.ssl.fastly.net/12078/img/services/incoming-webhook_48.png"
+      icon_url: "https://avatars1.githubusercontent.com/u/287677?v=3&s=40"
       mrkdwn: true
       attachments: []
 
