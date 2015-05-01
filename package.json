@@ -10,9 +10,11 @@
   "license": "MIT",
   "scripts": {
     "start": "http-server",
-    "build": "coffee -cb app",
-    "build-watch": "coffee -cbw app",
-    "build-js": "coffee -cb app && r.js -o build.js"
+    "build": "coffee -cb app && compass compile --sass-dir style --css-dir style",
+    "build-js-watch": "coffee -cbw app",
+    "build-js": "coffee -cb app && r.js -o build.js",
+    "build-css-watch": "compass watch --sass-dir style --css-dir style",
+    "build-css": "compass compile --sass-dir style --css-dir dist"
   },
   "devDependencies": {
     "almond": "^0.3.0",

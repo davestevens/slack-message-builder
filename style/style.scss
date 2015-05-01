@@ -1,0 +1,14 @@
+@import "compass/css3/border-radius";
+@import "message";
+@import "attachment";
+@import "attachment_field";
+
+html, body {
+  font-family: Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,41 @@
+.message {
+  padding: 3px 48px;
+  font-size: 15px;
+  line-height: 22px;
+  color: #3d3c40;
+
+  &__image {
+    position: absolute;
+    left: 0;
+    top: 3px;
+    width: 36px;
+    height: 36px;
+    border: 0;
+    @include border-radius(4px);
+  }
+
+  &__sender {
+    font-weight: bold;
+  }
+
+  &__label {
+    &--bot {
+      color: #797979;
+      font-size: 12px;
+      background: #f3f3f3;
+      padding: 2px;
+    }
+  }
+
+  &__timestamp {
+    font-size: 12px;
+    color: #babbbf;
+  }
+
+  &__content {
+  }
+
+  &__attachment {
+    max-width: 520px;
+  }
+}

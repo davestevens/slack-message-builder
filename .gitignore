@@ -1,2 +1,4 @@
 node_modules/
 app/*.js
+style/*.css
+.sass-cache

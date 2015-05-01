@@ -1,0 +1,51 @@
+.attachment {
+  &__pretext {
+  }
+
+  &__wrapper {
+    padding: 5px 0;
+    display: table;
+    width: 100%;
+  }
+
+  &__bar {
+    width: 4px;
+    @include border-radius(8px);
+    display: table-cell;
+  }
+
+  &__content {
+    display: table-cell;
+    padding-left: 12px;
+  }
+
+  &__author {
+    &--icon {
+      width: 16px;
+      height: 16px;
+      float: left;
+      margin-top: 2px;
+      margin-right: 5px;
+    }
+
+    &--name {
+      font-weight: bold;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+  }
+
+  &__content {
+  }
+
+  &__fields {
+    display: inline-block;
+    width: 100%;
+
+    table {
+      width: inherit;
+    }
+  }
+}
