@@ -12,9 +12,9 @@
     "start": "http-server",
     "build": "npm run build-js && npm run build-css",
     "build-js": "browserify app/application.js -o dist/application.js",
-    "build-js-watch": "watchify app/application.js -o dist/application.js",
+    "watch-js": "watchify app/application.js -o dist/application.js",
     "build-css": "compass compile --sass-dir style --css-dir dist",
-    "build-css-watch": "compass watch --sass-dir style --css-dir style"
+    "watch-css": "compass watch --sass-dir style --css-dir dist"
   },
   "devDependencies": {
     "bootstrap": "^3.3.2",
