@@ -57,7 +57,7 @@ class SlackMessageBuilder {
 
   _extend_attachments(attachments) {
     var defaults = this.defaults.attachment;
-    return attachments.map(function(attachment) {
+    return attachments.map(attachment => {
       return $.extend({}, defaults, attachment);
     });
   }

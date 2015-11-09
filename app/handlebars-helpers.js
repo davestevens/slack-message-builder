@@ -12,18 +12,18 @@ Handlebars.registerPartial({
   attachment_field: require("./templates/attachment_field.hbs")
 });
 
-Handlebars.registerHelper("attachment_format", function(name, attachment) {
+Handlebars.registerHelper("attachment_format", (name, attachment) => {
   var string = attachment[name];
   var markdown = $.inArray(name, attachment.mrkdwn_in) > -1;
   return Handlebars.helpers.format(string, markdown);
 });
 
-Handlebars.registerHelper("member_image", function(item) {
+Handlebars.registerHelper("member_image", (item) => {
   // TODO: emoji_url || icon_url
   return item.icon_url;
 });
 
-Handlebars.registerHelper("timestamp", function() {
+Handlebars.registerHelper("timestamp", () => {
   var date = new Date()
   var hours = date.getHours()
   var minutes = date.getMinutes()
@@ -31,7 +31,7 @@ Handlebars.registerHelper("timestamp", function() {
   return `${hours % 12}:${minutes} ${meridiem}`
 });
 
-Handlebars.registerHelper("format", function(string, markdown) {
+Handlebars.registerHelper("format", (string, markdown) => {
   if (!string) { return ""; }
   // links
   string = string.replace(/<(.*?)>/g, "<a>$1</a>");
@@ -56,7 +56,7 @@ Handlebars.registerHelper("format", function(string, markdown) {
   return new Handlebars.SafeString(string);
 });
 
-Handlebars.registerHelper("wrap_link", function(item, href) {
+Handlebars.registerHelper("wrap_link", (item, href) => {
   if (!href) { return item; }
   return new Handlebars.SafeString("<a href='#{href}'>#{item}</a>");
 });
