@@ -1,3 +1,4 @@
+@import "../node_modules/foundation-sites/scss/foundation";
 @import "compass/css3/border-radius";
 @import "message";
 @import "attachment";
@@ -11,4 +12,41 @@ html, body {
 
 a {
   text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  max-width: initial;
+}
+
+.input {
+  height: 100%;
+  background-color: #ccc;
+  padding: 6px 10px;
+
+  .text {
+    height: calc(100% - 50px);
+
+    textarea {
+      width: 100%;
+      height: 100%;
+      font-family: monospace;
+    }
+  }
+
+  .build {
+    height: 50px;
+
+    .button {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}
+
+.output {
+  height: 100%;
+  overflow-x: scroll;
+  padding: 6px 10px;
 }
