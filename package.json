@@ -2,7 +2,7 @@
   "name": "slack-message-builder",
   "version": "0.0.0",
   "description": "Slack Message Builder",
-  "author": "Dave Stevens <dave@crowdlab.com>",
+  "author": "Dave Stevens <dave@dstvns.co.uk>",
   "repository" : {
     "type" : "git",
     "url" : "https://github.com/davestevens/slack-message-builder.git"
