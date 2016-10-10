@@ -1,5 +1,7 @@
 # Slack Message Builder
 
+**Slack now have a tool that does this https://api.slack.com/docs/messages/builder**
+
 See what the payload you send to a [Slack](https://slack.com) `chat.postMessage` will be displayed like.
 Slack Formatting documentation: https://api.slack.com/docs/formatting
 
